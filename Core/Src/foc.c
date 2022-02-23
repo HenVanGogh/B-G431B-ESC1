@@ -393,6 +393,7 @@ void API_FOC_Torque_Update(
 	// note : when Iq is positive, motor turns CW
 	// note : FOC period is less than motor PWM period
 	// drop phase current samples a few times between each FOC iteration
+	//API_AS5048A_Position_Sensor_It(&htim4);
 	if(current_samples>current_sample_drop_rate)
 	{
 		current_samples-=(current_sample_drop_rate+1);
